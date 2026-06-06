@@ -1,4 +1,4 @@
-#🌍 Air Quality AQI Prediction using Deep Learning with TensorFlow
+🌍 Air Quality AQI Prediction using Deep Learning with TensorFlow
 
 ## 📌 Project Overview
 
