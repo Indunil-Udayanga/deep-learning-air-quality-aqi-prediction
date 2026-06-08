@@ -1,90 +1,77 @@
-# 🌍 Air Quality AQI Prediction using Deep Learning with TensorFlow
+# Air Quality Prediction using Deep Learning
 
-## 📌 Overview
+This project predicts Air Quality Index (AQI) using Artificial Neural Networks (ANN) implemented in both TensorFlow and PyTorch.
 
-This project predicts the **Air Quality Index (AQI)** using environmental and pollution-related data. A Deep Learning model built with **TensorFlow/Keras** learns the relationship between air pollutants, weather conditions, and AQI values to provide accurate predictions.
+## Project Overview
 
-## 🚀 Features
+The objective of this project is to analyze air quality data and build deep learning models capable of predicting AQI values based on environmental and pollutant measurements.
 
-* Data preprocessing and cleaning
-* Feature engineering
-* Exploratory Data Analysis (EDA)
-* Feature scaling and normalization
-* Deep Learning model training
-* Model evaluation and prediction
+## Dataset Features
 
-## 📊 Dataset Features
-
-### Pollution Indicators
-
-* CO (Carbon Monoxide)
-* NO₂ (Nitrogen Dioxide)
-* SO₂ (Sulfur Dioxide)
-* O₃ (Ozone)
+* AQI (Target Variable)
+* CO
 * PM2.5
 * PM10
-
-### Additional Features
-
-* Temperature
-* Humidity
-* Wind Speed
-* Hour, Day, Month
+* NO2
+* Date-based features (Hour, Day, Month)
 * City (One-Hot Encoded)
 
-### Target
-
-* AQI (Air Quality Index)
-
-## 🛠️ Technologies Used
-
-* Python
-* TensorFlow / Keras
-* Pandas
-* NumPy
-* Scikit-Learn
-* Matplotlib
-* Seaborn
-* Jupyter Notebook
-
-## 🤖 Model Architecture
+## Project Structure
 
 ```text
-Input Layer
-    ↓
-Dense (256, ReLU)
-    ↓
-Dropout (0.3)
-    ↓
-Dense (128, ReLU)
-    ↓
-Dropout (0.1)
-    ↓
-Dense (64, ReLU)
-    ↓
-Dropout (0.1)
-    ↓
-Dense (32, ReLU)
-    ↓
-Output Layer
+air-quality-prediction/
+│
+├── tensorflow/
+│   ├── air_quality_analysis.ipynb
+│   └── README.md
+│
+├── pytorch/
+│   ├── air_quality_analyse_pytorch.ipynb
+│   └── README.md
+│
+└── README.md
 ```
 
-## 📈 Training Configuration
+## Implementations
 
-* Optimizer: Adam
-* Loss Function: Mean Squared Error (MSE)
-* Metric: Mean Absolute Error (MAE)
-* Epochs: 50
-* Batch Size: 32
+### TensorFlow ANN
 
-## 🎯 Future Improvements
+Implementation of an Artificial Neural Network using TensorFlow/Keras.
+
+### PyTorch ANN
+
+Implementation of an Artificial Neural Network using PyTorch.
+
+## Data Preprocessing
+
+* Date feature engineering
+* One-hot encoding for city names
+* Missing value analysis
+* Outlier detection
+* Correlation analysis
+* Feature scaling
+
+## Exploratory Data Analysis
+
+* Correlation Heatmap
+* Pair Plots
+* Statistical Summary
+* Outlier Detection using Boxplots
+
+## Technologies Used
+
+* Python
+* TensorFlow
+* PyTorch
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+
+## Future Improvements
 
 * Hyperparameter tuning
-* FastAPI deployment
-* Streamlit dashboard
-* Real-time AQI prediction
-* Model comparison with other ML algorithms
-
-## 👨‍💻 Author
-
-Developed using TensorFlow and Python for Air Quality Index prediction and analysis.
+* Model comparison with XGBoost and Random Forest
+* Deployment using FastAPI
+* Real-time AQI prediction dashboard
